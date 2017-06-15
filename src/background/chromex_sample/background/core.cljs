@@ -20,7 +20,7 @@
 
 (defn create-context-menu-item []
   (context-menus/create #js {:id "pretty-printer"
-                             :title "Pretty Print EDN"
+                             :title "Pretty Print CLJ"
                              :contexts #js ["page" "selection"]}))
 
 ; -- main event loop --------------------------------------------------------------------------------------------------------

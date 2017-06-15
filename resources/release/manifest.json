@@ -1,5 +1,5 @@
 {
-  "name": "chromex-sample",
+  "name": "pretty-pretty-clj",
   "version": "0.1.0",
   "browser_action": {
     "default_title": "Show the popup",
@@ -30,7 +30,7 @@
     "persistent": false
   },
   "permissions": [
-    "contextMenus", "tabs"
+    "contextMenus", "tabs", "http://*/", "https://*/"
   ],
   "manifest_version": 2
 }
