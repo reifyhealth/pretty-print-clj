@@ -8,8 +8,7 @@
             [chromex.protocols :refer [post-message! get-sender]]
             [chromex.ext.context-menus :as context-menus]
             [chromex.ext.tabs :as tabs]
-            [chromex.ext.runtime :as runtime]
-            [chromex-sample.background.storage :refer [test-storage!]]))
+            [chromex.ext.runtime :as runtime]))
 
 ; -- context menu items
 
