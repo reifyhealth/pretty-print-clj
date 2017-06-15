@@ -42,7 +42,6 @@
     (runtime/tap-on-message-events event-channel)
     (go-loop []
       (when-let [event (<! event-channel)]
-        (log "EVENT" (str event))
         (pretty-print-cljs (last (js/document.querySelectorAll ":hover")))))))
 
 ;; -- main entry point -------------------------------------------------------------------------------------------------------

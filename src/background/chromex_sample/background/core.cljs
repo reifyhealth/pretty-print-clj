@@ -14,9 +14,10 @@
 ; -- context menu items
 
 (defn handle-pretty-print-click [menu-info tab-info]
-  (tabs/execute-script (aget tab-info "id") #js {:file "highlight.js"})
-  (tabs/insert-css (aget tab-info "id") #js {:file "highlight.css"})
-  (tabs/send-message (aget tab-info "id") true))
+  (let [tab-id (aget tab-info "id")]
+    (tabs/execute-script tab-id #js {:file "highlight.js"})
+    (tabs/insert-css     tab-id #js {:file "highlight.css"})
+    (tabs/send-message   tab-id true)))
 
 (defn create-context-menu-item []
   (context-menus/create #js {:id "pretty-printer"
@@ -27,9 +28,8 @@
 
 (defn process-chrome-event [event-num event]
   (let [[event-id event-args] event]
-    (case event-id
-      ::context-menus/on-clicked (apply handle-pretty-print-click event-args)
-      nil)))
+    (if (= event-id ::context-menus/on-clicked)
+      (apply handle-pretty-print-click event-args))))
 
 (defn run-chrome-event-loop! [chrome-event-channel]
   (go-loop [event-num 1]
