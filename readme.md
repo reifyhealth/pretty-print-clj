@@ -9,3 +9,4 @@ Run `lein release`, then visit [chrome://extensions](chrome://extensions) and cl
 ## TODO
 
 * Get rid of popup
+* Rename chromex namespaces
