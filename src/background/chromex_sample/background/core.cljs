@@ -16,13 +16,12 @@
 (defn handle-pretty-print-click [menu-info tab-info]
   (tabs/execute-script (aget tab-info "id") #js {:file "highlight.js"})
   (tabs/insert-css (aget tab-info "id") #js {:file "highlight.css"})
-  (let [response-chan (tabs/send-message (aget tab-info "id") "RIGHT CLICK")]
-    (go (when-let [response (<! response-chant)]))))
+  (tabs/send-message (aget tab-info "id") true))
 
 (defn create-context-menu-item []
-  
   (context-menus/create #js {:id "pretty-printer"
-                             :title "Pretty Print EDN"}))
+                             :title "Pretty Print EDN"
+                             :contexts #js ["page" "selection"]}))
 
 ; -- main event loop --------------------------------------------------------------------------------------------------------
 
