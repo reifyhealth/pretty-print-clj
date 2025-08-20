@@ -8,7 +8,7 @@
                  [environ "1.1.0"]]
 
   :plugins [[lein-cljsbuild "1.1.6"]
-            [lein-figwheel "0.5.10"]
+            [lein-figwheel "0.5.20"]
             [lein-shell "0.5.0"]
             [lein-environ "1.1.0"]
             [lein-cooper "1.2.2"]]
