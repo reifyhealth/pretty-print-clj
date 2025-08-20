@@ -1,5 +1,5 @@
 (defproject binaryage/chromex-sample "0.1.0-SNAPSHOT"
-  :dependencies [[org.clojure/clojure "1.9.0-alpha17"]
+  :dependencies [[org.clojure/clojure "1.12.1"]
                  [org.clojure/clojurescript "1.9.562"]
                  [org.clojure/core.async "0.3.443"]
                  [binaryage/chromex "0.5.8"]
