@@ -5,7 +5,7 @@
                  [binaryage/chromex "0.5.8"]
                  [binaryage/devtools "0.9.4"]
                  [figwheel "0.5.10"]
-                 [environ "1.1.0"]]
+                 [environ "1.2.0"]]
 
   :plugins [[lein-cljsbuild "1.1.6"]
             [lein-figwheel "0.5.10"]
